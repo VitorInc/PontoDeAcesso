@@ -2,7 +2,7 @@ package br.com.acc.Controlador.model;
 
 import lombok.*;
 
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 
 public class Location {
     private long id;
-    @OneToMany
+    @ManyToOne
     private AccessLvl accessLvl;
     private String description;
 }
