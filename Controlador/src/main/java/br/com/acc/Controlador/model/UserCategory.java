@@ -2,6 +2,9 @@ package br.com.acc.Controlador.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -9,7 +12,9 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 @Data
+@Entity
 public class UserCategory {
+    @Id
     private long id;
     private String description;
 

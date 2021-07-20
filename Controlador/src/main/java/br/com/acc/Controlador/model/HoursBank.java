@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,6 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class HoursBank {
 
     @AllArgsConstructor
@@ -25,6 +28,7 @@ public class HoursBank {
         private long idMovimentation;
         private long idUser;
     }
+    @Id
     @EmbeddedId
     private HoursBankId id;
     private LocalDateTime workDate;

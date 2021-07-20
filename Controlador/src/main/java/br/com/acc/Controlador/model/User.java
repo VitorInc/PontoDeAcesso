@@ -2,6 +2,8 @@ package br.com.acc.Controlador.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
@@ -11,7 +13,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class User {
+    @Id
     private long id;
     @ManyToOne
     private UserCategory userCategory;
