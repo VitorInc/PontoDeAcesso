@@ -20,15 +20,19 @@ import java.time.LocalDateTime;
 public class HoursBank {
 
     @AllArgsConstructor
-    @NoArgsConstructor
+
     @EqualsAndHashCode
     @Embeddable
     public class HoursBankId implements Serializable {
         private long idHoursBank;
         private long idMovimentation;
         private long idUser;
+
+        public HoursBankId() {
+
+        }
     }
-    @Id
+
     @EmbeddedId
     private HoursBankId id;
     private LocalDateTime workDate;
