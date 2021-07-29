@@ -30,6 +30,13 @@ public class JourneyService {
 
     public Optional<WorkJouney> getByID(Long idJourneys) throws Exception {
         return journeyRepository.findById(idJourneys);
+    }
 
+    public WorkJouney updateJourney(WorkJouney workJouney){
+        return journeyRepository.save(workJouney);
+    }
+
+    public void  deleteJourney(Long idJourneys){
+        journeyRepository.deleteById(idJourneys);
     }
 }

@@ -28,7 +28,7 @@ public class AccessController {
 
     @GetMapping("/{idJourney}")
     public ResponseEntity<WorkJouney> getJourneyListID(@PathVariable("idJourney") Long idJourneys) throws Exception {
-        return ResponseEntity.ok(journeyService.getByID(idJourneys).orElseThrow(() -> new Exception("Journey not founded"))) ;
+        return ResponseEntity.ok(journeyService.getByID(idJourneys).orElseThrow(() -> new Exception("Journey not founded")));
     }
 
 }
