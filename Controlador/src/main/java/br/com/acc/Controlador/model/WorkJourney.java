@@ -1,8 +1,10 @@
 package br.com.acc.Controlador.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Getter
@@ -12,8 +14,10 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class WorkJouney {
+@Audited
+public class WorkJourney {
     @Id
+    @GeneratedValue
     private long id;
     private String description;
 

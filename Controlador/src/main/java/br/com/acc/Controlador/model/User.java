@@ -1,6 +1,7 @@
 package br.com.acc.Controlador.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,6 +15,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class User {
     @Id
     private long id;
@@ -25,7 +27,7 @@ public class User {
     @ManyToOne
     private AccessLvl accessLvl;
     @ManyToOne
-    private WorkJouney workJouney;
+    private WorkJourney workJourney;
     private Location location;
     private BigDecimal tolerated;
 }

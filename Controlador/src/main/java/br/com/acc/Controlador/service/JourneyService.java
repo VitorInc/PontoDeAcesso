@@ -1,6 +1,6 @@
 package br.com.acc.Controlador.service;
 
-import br.com.acc.Controlador.model.WorkJouney;
+import br.com.acc.Controlador.model.WorkJourney;
 import br.com.acc.Controlador.repository.JourneyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class JourneyService {
+public class JourneyService implements IJourneyService {
 
 
     JourneyRepository journeyRepository;
@@ -19,21 +19,21 @@ public class JourneyService {
         this.journeyRepository = journeyRepository;
     }
 
-    public WorkJouney saveJourney(WorkJouney workJouney){
-        return journeyRepository.save(workJouney);
+    public WorkJourney saveJourney(WorkJourney workJourney){
+        return journeyRepository.save(workJourney);
 
     }
 
-    public List<WorkJouney> findAll() {
+    public List<WorkJourney> findAll() {
       return journeyRepository.findAll();
     }
 
-    public Optional<WorkJouney> getByID(Long idJourneys) throws Exception {
+    public Optional<WorkJourney> getByID(Long idJourneys) throws Exception {
         return journeyRepository.findById(idJourneys);
     }
 
-    public WorkJouney updateJourney(WorkJouney workJouney){
-        return journeyRepository.save(workJouney);
+    public WorkJourney updateJourney(WorkJourney workJourney){
+        return journeyRepository.save(workJourney);
     }
 
     public void  deleteJourney(Long idJourneys){
